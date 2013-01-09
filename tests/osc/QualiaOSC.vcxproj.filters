@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Source Files\qualia">
+      <UniqueIdentifier>{7ef6e8ec-42f1-41f6-aa47-eb8d8cc49fda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\qualia\core">
+      <UniqueIdentifier>{68dd5290-c13a-4c0f-a8a8-abf08ed39e5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\qualia\ga">
+      <UniqueIdentifier>{754e5871-5495-43ff-b82c-b8663725d35e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\qualia\plugins">
+      <UniqueIdentifier>{9529eda0-ed6c-49ae-a29e-5ef55177bcd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\qualia\rl">
+      <UniqueIdentifier>{b049ba60-06f6-486f-a0e8-db0377e9000a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\qualia\util">
+      <UniqueIdentifier>{c5628445-2481-4357-a08c-da066f34bcb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\qualia\plugins\mapper">
+      <UniqueIdentifier>{404d417e-d27d-49df-978a-e2c6b69bbdd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\qualia\plugins\osc">
+      <UniqueIdentifier>{4b2edd29-afab-4e03-b733-e26a655a3209}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\core\MultiAgent.cpp">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\core\Observation.cpp">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\core\Qualia.cpp">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\core\StaticAllocator.cpp">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\core\Action.cpp">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\core\Allocator.cpp">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\core\avrdefs.cpp">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\core\error.cpp">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\ga\BinaryChromosome.cpp">
+      <Filter>Source Files\qualia\ga</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\plugins\osc\OscEnvironment.cpp">
+      <Filter>Source Files\qualia\plugins\osc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\plugins\osc\OscRLEnvironment.cpp">
+      <Filter>Source Files\qualia\plugins\osc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\plugins\osc\OscBasicEnvironment.cpp">
+      <Filter>Source Files\qualia\plugins\osc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\rl\QLearningEGreedyPolicy.cpp">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\rl\QLearningSoftmaxPolicy.cpp">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\rl\RewardEnvironment.cpp">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\rl\RLObservation.cpp">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\rl\RLQualia.cpp">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\rl\NeuralNetwork.cpp">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\rl\QLearningAgent.cpp">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\rl\QLearningEDecreasingPolicy.cpp">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\util\random.cpp">
+      <Filter>Source Files\qualia\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\util\random_dist.cpp">
+      <Filter>Source Files\qualia\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\util\random_normal.cpp">
+      <Filter>Source Files\qualia\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\util\bitarray.cpp">
+      <Filter>Source Files\qualia\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qualia\util\log_add.cpp">
+      <Filter>Source Files\qualia\util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\qualia\core\MultiAgent.h">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\core\Observation.h">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\core\Qualia.h">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\core\StaticAllocator.h">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\core\Action.h">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\core\Agent.h">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\core\Allocator.h">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\core\avrdefs.h">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\core\common.h">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\core\Environment.h">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\core\error.h">
+      <Filter>Source Files\qualia\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\ga\BinaryChromosome.h">
+      <Filter>Source Files\qualia\ga</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\ga\Chromosome.h">
+      <Filter>Source Files\qualia\ga</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\plugins\osc\OscEnvironment.h">
+      <Filter>Source Files\qualia\plugins\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\plugins\osc\OscRLEnvironment.h">
+      <Filter>Source Files\qualia\plugins\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\plugins\osc\OscBasicEnvironment.h">
+      <Filter>Source Files\qualia\plugins\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\rl\QLearningEDecreasingPolicy.h">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\rl\QLearningEGreedyPolicy.h">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\rl\QLearningSoftmaxPolicy.h">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\rl\Reward.h">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\rl\RewardEnvironment.h">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\rl\RLObservation.h">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\rl\RLQualia.h">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\rl\NeuralNetwork.h">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\rl\Policy.h">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\rl\QLearningAgent.h">
+      <Filter>Source Files\qualia\rl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\util\MovingAverage.h">
+      <Filter>Source Files\qualia\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\util\random.h">
+      <Filter>Source Files\qualia\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\util\random_dist.h">
+      <Filter>Source Files\qualia\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\util\random_normal.h">
+      <Filter>Source Files\qualia\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\util\bitarray.h">
+      <Filter>Source Files\qualia\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\qualia\util\log_add.h">
+      <Filter>Source Files\qualia\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

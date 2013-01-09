@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>ManagedCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\src;D:\dependencies\liblo\include;D:\dependencies\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>D:\dependencies\pthreads\lib;D:\dependencies\liblo\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pthreadVC2.lib;liblo_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\src;D:\dependencies\liblo\include;D:\dependencies\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>D:\dependencies\pthreads\lib;D:\dependencies\liblo\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pthreadVC2.lib;liblo.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\qualia\core\Action.cpp" />
+    <ClCompile Include="..\..\src\qualia\core\Allocator.cpp" />
+    <ClCompile Include="..\..\src\qualia\core\avrdefs.cpp" />
+    <ClCompile Include="..\..\src\qualia\core\error.cpp" />
+    <ClCompile Include="..\..\src\qualia\core\MultiAgent.cpp" />
+    <ClCompile Include="..\..\src\qualia\core\Observation.cpp" />
+    <ClCompile Include="..\..\src\qualia\core\Qualia.cpp" />
+    <ClCompile Include="..\..\src\qualia\core\StaticAllocator.cpp" />
+    <ClCompile Include="..\..\src\qualia\ga\BinaryChromosome.cpp" />
+    <ClCompile Include="..\..\src\qualia\plugins\osc\OscBasicEnvironment.cpp" />
+    <ClCompile Include="..\..\src\qualia\plugins\osc\OscEnvironment.cpp" />
+    <ClCompile Include="..\..\src\qualia\plugins\osc\OscRLEnvironment.cpp" />
+    <ClCompile Include="..\..\src\qualia\rl\NeuralNetwork.cpp" />
+    <ClCompile Include="..\..\src\qualia\rl\QLearningAgent.cpp" />
+    <ClCompile Include="..\..\src\qualia\rl\QLearningEDecreasingPolicy.cpp" />
+    <ClCompile Include="..\..\src\qualia\rl\QLearningEGreedyPolicy.cpp" />
+    <ClCompile Include="..\..\src\qualia\rl\QLearningSoftmaxPolicy.cpp" />
+    <ClCompile Include="..\..\src\qualia\rl\RewardEnvironment.cpp" />
+    <ClCompile Include="..\..\src\qualia\rl\RLObservation.cpp" />
+    <ClCompile Include="..\..\src\qualia\rl\RLQualia.cpp" />
+    <ClCompile Include="..\..\src\qualia\util\bitarray.cpp" />
+    <ClCompile Include="..\..\src\qualia\util\log_add.cpp" />
+    <ClCompile Include="..\..\src\qualia\util\random.cpp" />
+    <ClCompile Include="..\..\src\qualia\util\random_dist.cpp" />
+    <ClCompile Include="..\..\src\qualia\util\random_normal.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\qualia\core\Action.h" />
+    <ClInclude Include="..\..\src\qualia\core\Agent.h" />
+    <ClInclude Include="..\..\src\qualia\core\Allocator.h" />
+    <ClInclude Include="..\..\src\qualia\core\avrdefs.h" />
+    <ClInclude Include="..\..\src\qualia\core\common.h" />
+    <ClInclude Include="..\..\src\qualia\core\Environment.h" />
+    <ClInclude Include="..\..\src\qualia\core\error.h" />
+    <ClInclude Include="..\..\src\qualia\core\MultiAgent.h" />
+    <ClInclude Include="..\..\src\qualia\core\Observation.h" />
+    <ClInclude Include="..\..\src\qualia\core\Qualia.h" />
+    <ClInclude Include="..\..\src\qualia\core\StaticAllocator.h" />
+    <ClInclude Include="..\..\src\qualia\ga\BinaryChromosome.h" />
+    <ClInclude Include="..\..\src\qualia\ga\Chromosome.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\osc\OscBasicEnvironment.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\osc\OscEnvironment.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\osc\OscRLEnvironment.h" />
+    <ClInclude Include="..\..\src\qualia\rl\NeuralNetwork.h" />
+    <ClInclude Include="..\..\src\qualia\rl\Policy.h" />
+    <ClInclude Include="..\..\src\qualia\rl\QLearningAgent.h" />
+    <ClInclude Include="..\..\src\qualia\rl\QLearningEDecreasingPolicy.h" />
+    <ClInclude Include="..\..\src\qualia\rl\QLearningEGreedyPolicy.h" />
+    <ClInclude Include="..\..\src\qualia\rl\QLearningSoftmaxPolicy.h" />
+    <ClInclude Include="..\..\src\qualia\rl\Reward.h" />
+    <ClInclude Include="..\..\src\qualia\rl\RewardEnvironment.h" />
+    <ClInclude Include="..\..\src\qualia\rl\RLObservation.h" />
+    <ClInclude Include="..\..\src\qualia\rl\RLQualia.h" />
+    <ClInclude Include="..\..\src\qualia\util\bitarray.h" />
+    <ClInclude Include="..\..\src\qualia\util\log_add.h" />
+    <ClInclude Include="..\..\src\qualia\util\MovingAverage.h" />
+    <ClInclude Include="..\..\src\qualia\util\random.h" />
+    <ClInclude Include="..\..\src\qualia\util\random_dist.h" />
+    <ClInclude Include="..\..\src\qualia\util\random_normal.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
