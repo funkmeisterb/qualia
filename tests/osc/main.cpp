@@ -314,7 +314,7 @@ static int handlerOscParameter(const char *path, const char *types, lo_arg **arg
 
 static void initOscParameter(int agentId, const char* paramName, float* param) {
   static char path[100];
-  sprintf(path, "/qualia/parameter/%d/%s", agentId, paramName);
+  sprintf(path, "/qualia/parameter/%s", paramName);
 
   // Initialize OSC messages for controlling parameters.
   lo_server_thread_add_method(OscManager::server(), path, 0, handlerOscParameter, param);
