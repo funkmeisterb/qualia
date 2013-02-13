@@ -295,7 +295,6 @@ void stop(int sig) {
 static int handlerOscParameter(const char *path, const char *types, lo_arg **argv,
                                int argc, void *data, void *user_data) {
   ASSERT_ERROR( argc == 1 );
-  printf("Received osc message: %s %c %d\n", path, types[0], argc);
   float f;
   switch (types[0]) {
   case LO_FLOAT:
@@ -309,6 +308,7 @@ static int handlerOscParameter(const char *path, const char *types, lo_arg **arg
     exit(-1);
   }
   *((float*)user_data) = f;
+  printf("Received osc message: %s %c %f\n", path, types[0], f);
   return 0;
 }
 
