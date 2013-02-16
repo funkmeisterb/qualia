@@ -24,6 +24,11 @@
 ActionProperties::ActionProperties(unsigned int dim, const unsigned int* nActions) : _dim(dim) {
   ASSERT_ERROR( nActions );
   ASSERT_ERROR( _dim > 0 );
+#if DEBUG_ERROR
+  // No dimension elements should be zero.
+  for (unsigned int i = 0; i < _dim; i++)
+    ASSERT_ERROR( nActions[i] != 0 );
+#endif
 
   // Allocate.
   _nActions = (unsigned int*) Alloc::malloc(_dim * sizeof(unsigned int));
@@ -48,7 +53,7 @@ bool ActionProperties::equals(const ActionProperties& p) const {
   return (_dim == p._dim && (memcmp(_nActions, p._nActions, _dim*sizeof(unsigned int)) == 0));
 }
 
-Action::Action(ActionProperties* properties_) : properties(properties_) {
+Action::Action(ActionProperties* properties_) : properties(properties_), _undefined(false) {
   ASSERT_ERROR(properties);
 
   // Allocate.
@@ -63,6 +68,7 @@ Action::~Action() {
 }
 
 action_t Action::conflated() const {
+  ASSERT_ERROR_MESSAGE( !_undefined, "Undefined action: you likely called reset() without calling next().");
   action_t action = 0;
   unsigned long mult = 1;
   for (unsigned int i=0; i<dim(); i++) {
@@ -73,20 +79,26 @@ action_t Action::conflated() const {
 }
 
 Action& Action::setConflated(action_t action) {
+  ASSERT_WARNING(action < nConflated());
   for (unsigned int i=0; i<dim(); i++) {
     actions[i] = action % nActions(i);
     action    /= nActions(i);
   }
+  // Remove undefined flag.
+  _undefined = false;
   return *this;
 }
 
 Action& Action::reset() {
-  // Zero.
-  memset(actions, 0, dim() * sizeof(action_dim_t));
+  // Make undefined.
+  _undefined = true;
   return *this;
 }
 
 bool Action::hasNext() {
+  if (_undefined)
+    return true;
+
   for (unsigned int i=0; i<dim(); i++)
     if (actions[i] != nActions(i)-1)
       return true;
@@ -94,12 +106,22 @@ bool Action::hasNext() {
 }
 
 Action& Action::next() {
-  for (unsigned int i=0; i<dim(); i++) {
-    if (actions[i] == nActions(i)-1) {
-      actions[i] = 0;
-    } else {
-      actions[i]++;
-      break;
+  ASSERT_WARNING( hasNext() );
+  // First call to next() sets to zero.
+  if (_undefined) {
+    memset(actions, 0, dim() * sizeof(action_dim_t));
+    _undefined = false;
+  }
+
+  // Later calls increase the counter.
+  else {
+    for (unsigned int i=0; i<dim(); i++) {
+      if (actions[i] == nActions(i)-1) {
+        actions[i] = 0;
+      } else {
+        actions[i]++;
+        break;
+      }
     }
   }
   return *this;
