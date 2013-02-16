@@ -13,7 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C7B893DB-4C99-4413-8554-16517984DF6A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>QualiaOSC</RootNamespace>
+    <RootNamespace>QualiaBTree</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -106,6 +106,18 @@
     <ClCompile Include="..\..\src\qualia\learning\StochasticDataSetTrainer.cpp" />
     <ClCompile Include="..\..\src\qualia\learning\Trainer.cpp" />
     <ClCompile Include="..\..\src\qualia\learning\XFileDataSet.cpp" />
+    <ClCompile Include="..\..\src\qualia\plugins\bt\BoolCondition.cpp" />
+    <ClCompile Include="..\..\src\qualia\plugins\bt\CountLimitNode.cpp" />
+    <ClCompile Include="..\..\src\qualia\plugins\bt\FloatCondition.cpp" />
+    <ClCompile Include="..\..\src\qualia\plugins\bt\FPCompare.cpp" />
+    <ClCompile Include="..\..\src\qualia\plugins\bt\FunctionCall.cpp" />
+    <ClCompile Include="..\..\src\qualia\plugins\bt\IntCondition.cpp" />
+    <ClCompile Include="..\..\src\qualia\plugins\bt\mtrand.cpp" />
+    <ClCompile Include="..\..\src\qualia\plugins\bt\ParallelNode.cpp" />
+    <ClCompile Include="..\..\src\qualia\plugins\bt\PriorityNode.cpp" />
+    <ClCompile Include="..\..\src\qualia\plugins\bt\ProbabilityNode.cpp" />
+    <ClCompile Include="..\..\src\qualia\plugins\bt\RepeatNode.cpp" />
+    <ClCompile Include="..\..\src\qualia\plugins\bt\SequentialNode.cpp" />
     <ClCompile Include="..\..\src\qualia\plugins\osc\OscAgent.cpp" />
     <ClCompile Include="..\..\src\qualia\plugins\osc\OscBasicAgent.cpp" />
     <ClCompile Include="..\..\src\qualia\plugins\osc\OscBasicEnvironment.cpp" />
@@ -162,6 +174,22 @@
     <ClInclude Include="..\..\src\qualia\learning\StochasticDataSetTrainer.h" />
     <ClInclude Include="..\..\src\qualia\learning\Trainer.h" />
     <ClInclude Include="..\..\src\qualia\learning\XFileDataSet.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\bt\BehaviorTree.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\bt\BehaviorTreeBase.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\bt\BoolCondition.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\bt\Common.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\bt\CountLimitNode.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\bt\FloatCondition.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\bt\FPCompare.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\bt\FunctionCall.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\bt\IntCondition.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\bt\mainpage.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\bt\mtrand.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\bt\ParallelNode.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\bt\PriorityNode.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\bt\ProbabilityNode.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\bt\RepeatNode.h" />
+    <ClInclude Include="..\..\src\qualia\plugins\bt\SequentialNode.h" />
     <ClInclude Include="..\..\src\qualia\plugins\osc\OscAgent.h" />
     <ClInclude Include="..\..\src\qualia\plugins\osc\OscBasicAgent.h" />
     <ClInclude Include="..\..\src\qualia\plugins\osc\OscBasicEnvironment.h" />

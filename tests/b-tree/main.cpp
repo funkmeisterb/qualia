@@ -66,7 +66,7 @@ const unsigned int N_ACTIONS[] = { 3, 3 };
 enum ObservationIndices {
   X,
   Y,
-  SIZE,
+  SIZE_OBS,
   HAS_CLOSEST,
   DIST_CLOSEST,
 };
@@ -76,7 +76,7 @@ enum ObservationIndices {
   Y,
   VX,
   VY,
-  SIZE,
+  SIZE_OBS,
   HAS_CLOSEST,
   DIST_CLOSEST,
   INFLUENCE_EAST,
